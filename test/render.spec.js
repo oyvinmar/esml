@@ -1,7 +1,7 @@
 import expect from 'expect';
 import lmth, { render } from '../src';
 
-describe('lmth', () => {
+describe('render function', () => {
   it('Render simple span', () => {
     const span = lmth('span', null);
 
