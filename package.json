@@ -1,7 +1,7 @@
 {
   "name": "lmth",
   "version": "0.1.0",
-  "description": "A ruthlessly simple library for rendering html in javascript",
+  "description": "A ruthlessly simple library for rendering html using pure functions.",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "scripts": {
