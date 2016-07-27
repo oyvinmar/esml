@@ -4,6 +4,11 @@
   "description": "A ruthlessly simple library for rendering html using pure functions.",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
+  "files": [
+    "es",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "build": "npm run build:commonjs && npm run build:es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
