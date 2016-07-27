@@ -1,67 +1,66 @@
-# lmth
+# esml
 
-lmth(html in revers) is a ruthlessly simple library for rendering html using pure functions.
+esml is a ruthlessly simple library for rendering html using pure functions.
 
 ### Installation
 
 ```
-npm install --save lmth
+npm install --save esml
 ```
-
 
 ### Documentation/API
 
-lmth consists of 2 functions:
+esml consists of 2 functions:
 
 #### render
 
 ```
 render(
-  lmth element,
+  esml element,
   DOMElement container
 )
 ```
-Renderes an lmth element to a DOMElement container. Existing DOMElement child noes is removed.
+Renderes an esml element to a DOMElement container. Existing DOMElement child noes is removed.
 
-#### lmth
+#### esml
 
 ```
-lmth(
+esml(
   string type,
   [object props],
   [children ...]
 )
 ```
-Create and return a new lmth element of the given type. The type argument must be an html tag name string.
+Create and return a new esml element of the given type. The type argument must be an html tag name string.
 
 ### Examples
 
 #### Without jsx
 ```js
-import lmth, { render } from 'lmth';
+import esml, { render } from 'esml';
 import persons from './persons';
 
 const element =
-  lmth('article', null,
-    lmth('header', null,
-      lmth('h2', null, 'Example without jsx')
+  esml('article', null,
+    esml('header', null,
+      esml('h2', null, 'Example without jsx')
     ),
-    lmth('section', null,
-      lmth('table', { className: 'table'},
-        lmth('thead', null,
-          lmth('tr', null,
-            lmth('th', null, 'Given name'),
-            lmth('th', null, 'Surname'),
-            lmth('th', { className: 'align-right'}, 'Year of birth'),
-            lmth('th', null, 'Wikipedia link')
+    esml('section', null,
+      esml('table', { className: 'table'},
+        esml('thead', null,
+          esml('tr', null,
+            esml('th', null, 'Given name'),
+            esml('th', null, 'Surname'),
+            esml('th', { className: 'align-right'}, 'Year of birth'),
+            esml('th', null, 'Wikipedia link')
           )
         ),
-        lmth('tbody', null, persons.map(person => lmth('tr', null,
-          lmth('td', null, person.givenName),
-          lmth('td', null, person.surname),
-          lmth('td', { className: 'align-right' }, person.yearOfBirth),
-          lmth('td', null ,
-            lmth('a', { href: person.wikiURL }, 'Link')
+        esml('tbody', null, persons.map(person => esml('tr', null,
+          esml('td', null, person.givenName),
+          esml('td', null, person.surname),
+          esml('td', { className: 'align-right' }, person.yearOfBirth),
+          esml('td', null ,
+            esml('a', { href: person.wikiURL }, 'Link')
           )
         )))
       )
@@ -72,9 +71,9 @@ render(element, document.getElementById('root'));
 ```
 #### With babel jsx transform
 ```js
-/** @jsx lmth */
+/** @jsx esml */
 
-import lmth, { render } from 'lmth';
+import esml, { render } from 'esml';
 import persons from './persons';
 
 const element = (

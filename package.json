@@ -1,5 +1,5 @@
 {
-  "name": "lmth",
+  "name": "esml",
   "version": "0.1.0",
   "description": "A ruthlessly simple library for rendering html using pure functions.",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
     "build": "npm run build:commonjs && npm run build:es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "clean": "rimraf ./lib",
+    "clean": "rimraf ./lib ./es",
     "lint": "eslint --ext .js --ext .jsx ./src",
     "prepublish": "npm run test && npm run clean && npm run build",
     "test": "mocha --compilers js:babel-register --recursive --require ./test/setup.js",

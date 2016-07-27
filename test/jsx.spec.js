@@ -1,8 +1,8 @@
-/** @jsx lmth */
+/** @jsx esml */
 import expect from 'expect';
-import lmth from '../src';
+import esml from '../src';
 
-describe('transform jsx into lmth function calls', () => {
+describe('transform jsx into esml function calls', () => {
   it('Element without props', () => {
     const span = <span></span>;
     expect(span).toEqual({ type: 'span', props: {}, children: [] });

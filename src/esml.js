@@ -1,4 +1,4 @@
-export default function lmth(type, props, ...children) {
+export default function esml(type, props, ...children) {
   const flattened = children.reduce((a, b) => a.concat(b), []);
   return { type, props: props || {}, children: flattened };
 }

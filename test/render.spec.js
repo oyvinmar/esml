@@ -1,9 +1,9 @@
 import expect from 'expect';
-import lmth, { render } from '../src';
+import esml, { render } from '../src';
 
 describe('render function', () => {
   it('Render simple span', () => {
-    const span = lmth('span', null);
+    const span = esml('span', null);
 
     render(span, document.getElementById('root'));
 
@@ -11,7 +11,7 @@ describe('render function', () => {
   });
 
   it('Render p with text', () => {
-    const p = lmth('p', null, 'Hello world');
+    const p = esml('p', null, 'Hello world');
 
     render(p, document.getElementById('root'));
 
@@ -19,7 +19,7 @@ describe('render function', () => {
   });
 
   it('Render img with with props (html attributes)', () => {
-    const img = lmth('img', { className: 'example', src: 'http://example.com/', alt: 'An example' });
+    const img = esml('img', { className: 'example', src: 'http://example.com/', alt: 'An example' });
 
     render(img, document.getElementById('root'));
 
@@ -28,7 +28,7 @@ describe('render function', () => {
   });
 
   it('Render i with number', () => {
-    const i = lmth('i', null, 1337);
+    const i = esml('i', null, 1337);
 
     render(i, document.getElementById('root'));
 
@@ -37,7 +37,7 @@ describe('render function', () => {
 
   it('Render div with onClick event', () => {
     const handleClick = expect.createSpy();
-    const div = lmth('div', { onClick: handleClick, id: 'clickTest' });
+    const div = esml('div', { onClick: handleClick, id: 'clickTest' });
 
     render(div, document.getElementById('root'));
     document.getElementById('clickTest').click();
@@ -46,12 +46,12 @@ describe('render function', () => {
   });
 
   it('Render input with boolean prop', () => {
-    const input1 = lmth('input', { type: 'text', disabled: true });
+    const input1 = esml('input', { type: 'text', disabled: true });
     render(input1, document.getElementById('root'));
     expect(document.getElementById('root').innerHTML).toEqual('<input type="text" disabled="">');
 
 
-    const input2 = lmth('input', { type: 'text', disabled: false });
+    const input2 = esml('input', { type: 'text', disabled: false });
     render(input2, document.getElementById('root'));
     expect(document.getElementById('root').innerHTML).toEqual('<input type="text">');
   });

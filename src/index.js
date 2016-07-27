@@ -1,6 +1,6 @@
-import lmth, { render } from './lmth';
+import esml, { render } from './esml';
 
-export default lmth;
+export default esml;
 
 export {
   render,
