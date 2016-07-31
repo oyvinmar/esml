@@ -39,6 +39,14 @@
     "mocha": "2.5.3",
     "rimraf": "2.5.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oyvinmar/esml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oyvinmar/esml/issues"
+  },
+  "homepage": "https://github.com/oyvinmar/esml",
   "author": "Øyvind Marthinsen",
   "license": "MIT"
 }
