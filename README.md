@@ -1,6 +1,9 @@
 # esml
-
 esml is a ruthlessly simple library for rendering html using pure functions.
+
+[![Build Status](https://travis-ci.org/oyvinmar/esml.svg?branch=master)](https://travis-ci.org/oyvinmar/esml)
+[![npm version](https://img.shields.io/npm/v/esml.svg?style=flat-square)](https://www.npmjs.com/package/esml)
+[![npm downloads](https://img.shields.io/npm/dm/esml.svg?style=flat-square)](https://www.npmjs.com/package/esml)
 
 ### Installation
 
